@@ -1,0 +1,62 @@
+name: u_design_i_dare
+description: 28 Days of UI/UX Challange.
+
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.16.0 <3.0.0"
+
+dependencies:
+  cupertino_icons: ^1.0.2
+  flutter:
+    sdk: flutter
+  google_fonts: ^2.3.1
+  pin_input_text_field: ^4.1.1
+  responsive_framework: ^0.1.7
+  url_strategy: ^0.2.0
+  velocity_x: ^3.4.0
+  flutter_native_splash: ^2.0.4
+
+dev_dependencies:
+  flutter_lints: ^1.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter_native_splash:
+  color: "#f5f5f5"
+  image: assets/splash.png
+  web: true
+  web_image_mode: center
+
+flutter:
+  uses-material-design: true
+  assets:
+    - logo.png
+    - facebook.png
+    - insta.png
+    - twitter.png
+    - splash.png
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Black.ttf
+    - family: Potta One
+      fonts:
+        - asset: assets/fonts/PottaOne-Regular.ttf
+    - family: Rammetto One
+      fonts:
+        - asset: assets/fonts/RammettoOne-Regular.ttf
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Black.ttf
+    - family: Rampart One
+      fonts:
+        - asset: assets/fonts/RampartOne-Regular.ttf
+    - family: Rasa
+      fonts:
+        - asset: assets/fonts/Rasa-VariableFont_wght.ttf
+    - family: Rock Salt
+      fonts:
+        - asset: assets/fonts/RockSalt-Regular.ttf
