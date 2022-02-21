@@ -6,10 +6,11 @@ import 'package:velocity_x/velocity_x.dart';
 import 'package:u_design_i_dare/widgets/drawer.dart';
 
 class PageStruc extends StatelessWidget {
+  final Color? bgColor;
   final Widget body;
   final String day;
   const PageStruc({
-    Key? key,
+    Key? key, this.bgColor,
     required this.body,
     required this.day,
   }) : super(key: key);
@@ -22,7 +23,7 @@ class PageStruc extends StatelessWidget {
       appBar: AppBar(
         title: "28 Days Of UI/UX".text.xl3.fontFamily('Potta One').make(),
         centerTitle: true,
-        backgroundColor: Colors.white,
+        backgroundColor: bgColor?? Colors.white,
         elevation: 10,
         actions: ['Day${day}'.text.xl2.fontFamily('Rampart One').make().centered().px32()],
       ),

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+import 'package:u_design_i_dare/pages/challange_pages/chat_ui.dart';
 import 'package:u_design_i_dare/pages/challange_pages/confirm_page.dart';
 import 'package:u_design_i_dare/pages/challange_pages/day1.dart';
 import 'package:u_design_i_dare/pages/challange_pages/forgot_page.dart';
 import 'package:u_design_i_dare/pages/challange_pages/login_page.dart';
+import 'package:u_design_i_dare/pages/landingPage.dart';
 import 'package:u_design_i_dare/utils/routes.dart';
 import 'package:u_design_i_dare/widgets/theme.dart';
 import 'package:url_strategy/url_strategy.dart';
@@ -36,12 +38,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.light,
       theme: MyTheme.lightTheme(context),
-      initialRoute: MyRoutes.day1,
+      initialRoute: "/",
       routes: {
+        '/': (context) => const LandingPage(),
         MyRoutes.day1: (context) => const Day1(),
         MyRoutes.loginRoute: (context) => const LoginPage(),
         MyRoutes.forgotPassRoute: (context) => const ForgotPage(),
         MyRoutes.confirmRoute: (context) => const ConfirmPage(),
+        MyRoutes.day2: (context) => const ChatUI(),
       },
     );
   }

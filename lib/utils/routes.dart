@@ -3,4 +3,5 @@ class MyRoutes{
   static String loginRoute = "/login";
   static String forgotPassRoute = "/fotgotPass";
   static String confirmRoute = "/confirm";
+  static String day2 = "/day2";
 }
