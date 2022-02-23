@@ -28,5 +28,4 @@ jobs:
           git config --global user.email "sm8967724231@gmail.com"
           git config --global user.name "Rey"
           git commit -m "Auto updating"
-          git fetch origin main
           git push origin HEAD:main
