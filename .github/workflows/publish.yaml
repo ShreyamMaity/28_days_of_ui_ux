@@ -21,7 +21,7 @@ jobs:
       - run: flutter pub get
       - run: flutter build web
       - run: |
-          rm ./docs/*
+          rm -rf ./docs/*
           cp -r ./build/web/* ./docs/
           git status
           git add .
