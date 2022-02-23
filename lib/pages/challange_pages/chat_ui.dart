@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:u_design_i_dare/utils/routes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import 'package:u_design_i_dare/widgets/drawer.dart';
@@ -113,14 +114,32 @@ class ChatUI extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        const Icon(
-                          CupertinoIcons.back,
-                          size: 40,
+                        InkWell(
+                          onTap: () {
+                            ScaffoldMessenger.of(context)
+                                .showSnackBar(const SnackBar(
+                              content: Text("Not Supported"),
+                              duration: Duration(milliseconds: 600),
+                            ));
+                          },
+                          child: const Icon(
+                            CupertinoIcons.back,
+                            size: 40,
+                          ),
                         ),
-                        Image.asset(
-                          "assets/dp.png",
-                          height: 62,
-                          width: 62,
+                        InkWell(
+                          onTap: () {
+                            ScaffoldMessenger.of(context)
+                                .showSnackBar(const SnackBar(
+                              content: Text("Coming Soon..."),
+                              duration: Duration(milliseconds: 600),
+                            ));
+                          },
+                          child: Image.asset(
+                            "assets/dp.png",
+                            height: 62,
+                            width: 62,
+                          ),
                         ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -143,20 +162,47 @@ class ChatUI extends StatelessWidget {
                         const SizedBox(
                           width: 10,
                         ),
-                        Icon(
-                          Icons.call,
-                          size: 30,
-                          color: const Color(0xFF000000).withOpacity(.69),
+                        InkWell(
+                          onTap: () {
+                            ScaffoldMessenger.of(context)
+                                .showSnackBar(const SnackBar(
+                              content: Text("Not Supported"),
+                              duration: Duration(milliseconds: 600),
+                            ));
+                          },
+                          child: Icon(
+                            Icons.call,
+                            size: 30,
+                            color: const Color(0xFF000000).withOpacity(.69),
+                          ),
                         ),
-                        Icon(
-                          Icons.video_call,
-                          size: 35,
-                          color: const Color(0xFF000000).withOpacity(.69),
+                        InkWell(
+                          onTap: () {
+                            ScaffoldMessenger.of(context)
+                                .showSnackBar(const SnackBar(
+                              content: Text("Not Supported"),
+                              duration: Duration(milliseconds: 600),
+                            ));
+                          },
+                          child: Icon(
+                            Icons.video_call,
+                            size: 35,
+                            color: const Color(0xFF000000).withOpacity(.69),
+                          ),
                         ),
-                        Icon(
-                          Icons.more_vert,
-                          size: 35,
-                          color: const Color(0xFF000000).withOpacity(.69),
+                        InkWell(
+                          onTap: () {
+                            ScaffoldMessenger.of(context)
+                                .showSnackBar(const SnackBar(
+                              content: Text("Not Supported"),
+                              duration: Duration(milliseconds: 600),
+                            ));
+                          },
+                          child: Icon(
+                            Icons.more_vert,
+                            size: 35,
+                            color: const Color(0xFF000000).withOpacity(.69),
+                          ),
                         ),
                       ],
                     ),
@@ -182,20 +228,34 @@ class ChatUI extends StatelessWidget {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                Icon(CupertinoIcons.smiley,
-                                    size: 40,
-                                    color: const Color(0xFF000000)
-                                        .withOpacity(.56)),
+                                InkWell(
+                                  onTap: () {
+                                    ScaffoldMessenger.of(context)
+                                        .showSnackBar(const SnackBar(
+                                      content: Text("Not Supported"),
+                                      duration: Duration(milliseconds: 600),
+                                    ));
+                                  },
+                                  child: Icon(CupertinoIcons.smiley,
+                                      size: 40,
+                                      color: const Color(0xFF000000)
+                                          .withOpacity(.56)),
+                                ),
                                 const SizedBox(
                                   width: 10,
                                 ),
-                                "Message"
-                                    .text
-                                    .color(const Color(0xFF131B38)
-                                        .withOpacity(.47))
-                                    .textStyle(const TextStyle(fontSize: 27))
-                                    .fontFamily('Rasa')
-                                    .make(),
+                                Container(
+                                  padding: const EdgeInsets.only(bottom: 5),
+                                  height: 40,
+                                  width: 100,
+                                  child: TextFormField(
+                                    obscureText: true,
+                                    decoration: const InputDecoration(
+                                      border: InputBorder.none,
+                                      hintText: "Message",
+                                    ),
+                                  ),
+                                ),
                               ],
                             ),
                             const SizedBox(
@@ -206,19 +266,46 @@ class ChatUI extends StatelessWidget {
                               children: [
                                 Transform.rotate(
                                   angle: 315.25 * pi / 180,
-                                  child: Icon(Icons.attach_file_rounded,
+                                  child: InkWell(
+                                    onTap: () {
+                                      ScaffoldMessenger.of(context)
+                                          .showSnackBar(const SnackBar(
+                                        content: Text("Not Supported"),
+                                        duration: Duration(milliseconds: 600),
+                                      ));
+                                    },
+                                    child: Icon(Icons.attach_file_rounded,
+                                        size: 40,
+                                        color: const Color(0xFF000000)
+                                            .withOpacity(.56)),
+                                  ),
+                                ),
+                                InkWell(
+                                  onTap: () {
+                                    ScaffoldMessenger.of(context)
+                                        .showSnackBar(const SnackBar(
+                                      content: Text("Not Supported"),
+                                      duration: Duration(milliseconds: 600),
+                                    ));
+                                  },
+                                  child: Icon(Icons.mic,
                                       size: 40,
                                       color: const Color(0xFF000000)
                                           .withOpacity(.56)),
                                 ),
-                                Icon(Icons.mic,
-                                    size: 40,
-                                    color: const Color(0xFF000000)
-                                        .withOpacity(.56)),
-                                Icon(Icons.camera_alt,
-                                    size: 40,
-                                    color: const Color(0xFF000000)
-                                        .withOpacity(.56)),
+                                InkWell(
+                                  onTap: () {
+                                    ScaffoldMessenger.of(context)
+                                        .showSnackBar(const SnackBar(
+                                      content: Text("Not Supported"),
+                                      duration: Duration(milliseconds: 600),
+                                    ));
+                                  },
+                                  child: Icon(Icons.camera_alt,
+                                      size: 40,
+                                      color: const Color(0xFF000000)
+                                          .withOpacity(.56)),
+                                ),
                               ],
                             )
                           ],
@@ -227,10 +314,19 @@ class ChatUI extends StatelessWidget {
                       const SizedBox(
                         width: 5,
                       ),
-                      Icon(
-                        Icons.send,
-                        size: 50,
-                        color: const Color(0xFF121212).withOpacity(.73),
+                      InkWell(
+                        onTap: () {
+                          ScaffoldMessenger.of(context)
+                              .showSnackBar(const SnackBar(
+                            content: Text("Not Supported"),
+                            duration: Duration(milliseconds: 600),
+                          ));
+                        },
+                        child: Icon(
+                          Icons.send,
+                          size: 50,
+                          color: const Color(0xFF121212).withOpacity(.73),
+                        ),
                       ),
                     ],
                   ),
@@ -251,17 +347,38 @@ class ChatUI extends StatelessWidget {
                         children: [
                           Transform.rotate(
                             angle: pi,
-                            child: Icon(Icons.play_arrow,
-                                size: 48,
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.pushNamed(context, '/');
+                              },
+                              child: Icon(Icons.play_arrow,
+                                  size: 48,
+                                  color:
+                                      const Color(0xFF0A0A0A).withOpacity(.30)),
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              ScaffoldMessenger.of(context)
+                                  .showSnackBar(const SnackBar(
+                                content: Text("Not Supported"),
+                                duration: Duration(milliseconds: 600),
+                              ));
+                            },
+                            child: Icon(Icons.circle,
+                                size: 32,
                                 color:
                                     const Color(0xFF0A0A0A).withOpacity(.30)),
                           ),
-                          Icon(Icons.circle,
-                              size: 32,
-                              color: const Color(0xFF0A0A0A).withOpacity(.30)),
-                          Icon(Icons.square,
-                              size: 30,
-                              color: const Color(0xFF0A0A0A).withOpacity(.30)),
+                          InkWell(
+                            onTap: () {
+                              Navigator.pushNamed(context, '/');
+                            },
+                            child: Icon(Icons.square,
+                                size: 30,
+                                color:
+                                    const Color(0xFF0A0A0A).withOpacity(.30)),
+                          ),
                         ],
                       ),
                     )),
